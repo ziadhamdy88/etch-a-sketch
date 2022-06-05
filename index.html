@@ -5,11 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Etch-a-Sketch</title>
+        <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div id="main"></div>
-
+        <div class="main">
+            <div class="title"><h1>Sketch Pad</h1></div>
+            <div class="mode">Mode: Coloring</div>
+            <div class="content">
+                <div class="board"></div>
+                <div class="buttons">
+                    <button id="blackButton" onclick="changeColor('black')">Black</button>
+                    <button id="erasorButton" onclick="changeColor('white')">Erasor</button>
+                    <button id="grayButton" onclick="changeColor('gray')">Gray</button>
+                    <button id="randomButton" onclick="changeColor('random')">Random</button>
+                    <button onclick="resetBoard()">Reset</button>
+                </div>
+                <div>
+                    <input
+                    type="text"
+                    placeholder="Size of Board"
+                    value="16"
+                    onchange="changeSize(this.value)"
+                    />
+                    <button>Set Size</button>
+                </div>
+                <div id="error">
+                    Size must be between 2 and 100
+                </div>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>

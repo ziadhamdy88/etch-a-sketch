@@ -1,4 +1,107 @@
-#main {
-    display: inline-block;
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(53.73%,58.82%, 49.8%), white);
 }
 
+.board {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.board:hover {
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+    height: 60vw;
+    width: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#blackButton {
+    background-color: black;
+    color: white;
+}
+
+#blackButton:hover{
+    background-color: white;
+    color: black;
+}
+
+#grayButton {
+    background-color: rgba(128, 128, 128, 0.411);
+    color: black;
+}
+
+#grayButton:hover{
+    background-color: #696969;
+    color: black;
+}
+
+#randomButton {
+    background: linear-gradient(0.25turn, #766980, #89997c, #8b8b8b);
+}
+
+#randomButton:hover{
+    background: linear-gradient(0.25turn, #808080, #89997c, #6b8e23);
+}
+
+#erasorButton {
+    background-color: #cccccc;
+    color: black;
+}
+
+#erasorButton:hover{
+    background-color: white;
+    color: black;
+}
+
+input {
+    width: 50px;
+}
+
+.mode {
+    margin-bottom: 10px;
+}
+
+#error {
+    display: none;
+}
